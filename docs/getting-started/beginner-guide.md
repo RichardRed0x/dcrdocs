@@ -6,17 +6,17 @@ Last updated for Decrediton v1.2.1
 
 ## Welcome To Decred 
 
-This beginner's guide introduces the project, and offers signposts to some useful pages and platforms.
+This beginner's guide introduces Decred, and offers signposts to some useful resources.
 
-Decred is an autonomous digital currency. Stakeholders make and enforce the blockchain's consensus rules, set a course for future development, and decide how the project's treasury is used to fund it. Decred's blockchain is similar to Bitcoin's, but with major aspects of [governance](/governance/governance/) baked into the protocol. 
+Decred is an autonomous digital currency. Stakeholders make and enforce the blockchain's consensus rules, set a course for future development, and decide how the project's treasury is used to fund it. Decred's blockchain is similar to Bitcoin's, but with major aspects of [governance](/governance/governance.md) baked into the protocol. 
 
-[Proof of Work](/mining/proof-of-work/) miners play a similar role for Decred as they do for Bitcoin, but with Decred they only receive 60% of the block reward.
+[Proof of Work](/mining/proof-of-work.md) Miners play a similar role for Decred as they do for Bitcoin, but with Decred they only receive 60% of the block reward.
 
-[Ticket Voting](/mining/proof-of-stake/) is central to Decred's governance. Decred holders can time-lock (or "stake") chunks of DCR to buy tickets. Tickets are randomly called to vote on-chain, this involves both approving the work of PoW Miners and voting Yes/No on any open [rule change proposals](/getting-started/user-guides/agenda-voting/). 30% of the block reward goes to the holders of the tickets that voted in that block.
+[Ticket Voting](/mining/proof-of-stake.md) is central to Decred's governance. Decred holders can time-lock (or "stake") chunks of DCR to buy tickets. Tickets are randomly called to vote on-chain, this involves both approving the work of PoW Miners and voting Yes/No on any open [rule change proposals](/getting-started/user-guides/agenda-voting.md). 30% of the block reward goes to the holders of the tickets that voted in that block.
 
-The remaining 10% of the block reward goes into a [Project Treasury fund](). Holders of live tickets decide how that treasury is used through [Politeia proposals and voting](/).
+The remaining 10% of the block reward goes into a [Project Treasury fund](http://explorer.dcrdata.org/address/Dcur2mcGjmENx4DhNqDctW5wJCVyT3Qeqkx). Holders of live tickets decide how that treasury is used through [Politeia proposals and voting](/governance/politeia.md).
 
-The [Decred Constitution](/getting-started/constitution/) sets out some guiding principles for the project, this is also subject to amendment through Politeia proposal.
+The [Decred Constitution](/getting-started/constitution.md) sets out some guiding principles for the project, the constitution is subject to amendment through Politeia proposals.
 
 ## Wallets
 
@@ -41,50 +41,63 @@ Telegram, Rocket.Chat and KakaoTalk are partially bridged.
 
 ### Social Media
 
-* Reddit
+* [Reddit](https://www.reddit.com/r/decred)
 
-* Twitter
-* Forum
-* Facebook
-* Youtube
-* Medium
+* [Twitter]() (account operated by small group of contributors)
+* [Forum](https://forum.decred.org/)
+* [Facebook](https://facebook.com/decredproject) 
 
 ### Code
 
-Code for a variety of software projects lives on [GitHub](https://github.com/decred). Issues can be used to track bugs or feature requests, Pull Requests for delivering improvements. Some important GitHub repositories:
+Code for a variety of software projects lives on [GitHub](https://github.com/decred). Issues can be used to report bugs or suggest features. Pull Requests can be issued to merge work into the main repository branch.
 
-* decrediton - GUI wallet
-* dcrd and dcrwallet - Decred daemons
-* politeia and politeiagui - Politeia back and front end
-* dcrdata - block explorer
-* dcrdocs - this docs site
-* dcrweb - Decred.org
-* dcps - Decred Change Proposals
+Selected GitHub repositories:
 
-## News/Information
+* [decrediton](https://github.com/decred/decrediton) - GUI wallet
+* [dcrd](https://github.com/decred/dcrd) and [dcrwallet](https://github.com/decred/dcrwallet) - Decred daemons
+* [politeia](https://github.com/decred/politeia) and [politeiagui](https://github.com/decred/politeiagui) - Politeia back and front end
+* [dcrdata](https://github.com/decred/dcrdata) - block explorer
+* [dcrdocs](https://github.com/decred/dcrdocs) - this [docs site](http://docs.decred.org)
+* [dcrweb](https://github.com/decred/dcrweb) - [Decred.org](https://decred.org/)
+* [dcps](https://github.com/decred/dcps) - Decred Change Proposals
 
-Network Stats
+### Contributing
+
+Decred is always looking for new contributors. A basic outline of how this works is: Show up, Find something useful to do, Do it, Get Paid. Do a small bit at first and see if other contributors in that domain appreciate it. This [blog post](https://blog.decred.org/2017/07/25/Decred-Recruiting/) explains the project's recruitment philosophy and approach in more detail.
+
+## Information
+
+**Network Stats**
 
 * https://stats.decred.org/
 * https://dcrstats.com/
 
-Block Explorers
+**Block Explorers**
 
 * https://explorer.dcrdata.org/
 * https://mainnet.decred.org/
 
+**News/Articles**
 
+* [Decred journal](https://github.com/xaur/decred-news/tree/master/journal) - comprehensive monthly newsletter maintained by some community members
+* [Decred.org blog](https://blog.decred.org)
+* [Decred Medium](https://medium.com/decred) (curated content from community members)
+* [Press coverage/releases](https://decred.org/press/)
+* [The Decred Digest](https://thedecreddigest.com/) - community blog
 
-Journal
+**Video**
 
-Contributing: Decred blog post
+* [Decred Youtube channel](https://www.youtube.com/channel/UCJ2bYDaPYHpSmJPh_M5dNSg/videos)
+
 
 ## General Guides 
 
-The following guides are independent of the different applications:
+The following guides go into depth on key aspects of the Decred experience:
 
-* [Using Testnet](/getting-started/using-testnet.md)
 * [Obtaining DCR](/getting-started/obtaining-dcr.md)
 * [Using the Block Explorer](/getting-started/using-the-block-explorer.md)
-* [Proof-of-Stake Guide](/mining/proof-of-stake.md)
-* [Mainnet Voting Guide](/getting-started/user-guides/agenda-voting.md)
+* [Governance](/governance/governance/)
+* [Ticket buying guide](/mining/proof-of-stake.md)
+* [Politeia](/governance/politeia.md)
+* [Voting on consensus rules changes](/getting-started/user-guides/agenda-voting.md)
+* [Using Testnet](/getting-started/using-testnet.md)
