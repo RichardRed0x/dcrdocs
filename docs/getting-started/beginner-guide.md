@@ -101,3 +101,4 @@ The following guides go into depth on key aspects of the Decred experience:
 * [Politeia](/governance/politeia.md)
 * [Voting on consensus rules changes](/getting-started/user-guides/agenda-voting.md)
 * [Using Testnet](/getting-started/using-testnet.md)
+
