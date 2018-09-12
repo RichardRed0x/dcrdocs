@@ -79,7 +79,7 @@ Decred is always looking for new contributors. A basic outline of how this works
 
 **News/Articles**
 
-* [Decred journal](https://github.com/xaur/decred-news/tree/master/journal) - comprehensive monthly newsletter maintained by some community members
+* [Decred journal](https://xaur.github.io/decred-news/) - comprehensive monthly newsletter maintained by some community members
 * [Decred.org blog](https://blog.decred.org)
 * [Decred Medium](https://medium.com/decred) (curated content from community members)
 * [Press coverage/releases](https://decred.org/press/)
@@ -101,3 +101,4 @@ The following guides go into depth on key aspects of the Decred experience:
 * [Politeia](/governance/politeia.md)
 * [Voting on consensus rules changes](/getting-started/user-guides/agenda-voting.md)
 * [Using Testnet](/getting-started/using-testnet.md)
+
