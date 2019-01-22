@@ -2,9 +2,11 @@
 
 ---
 
-#### 1. Should I give my wallet seed to someone? 
+#### 1. Why should I not store my seed in a file on my machine or share the seed with someone? 
 
-No, you should never[^8613] share your wallet seed with anyone. Doing so is the equivalent of giving them all of your DCR in that wallet.
+Your seed is used to recreate your wallet and its accounts granting anyone with knowledge of the seed complete control of the funds within the wallet. If your machine were to be compromised and your seed stolen, the attacker would have the ability to drain your funds by sending your DCR to wallets under their control. Likewise, sharing your seed with anyone regardless of your current level of trust is highly discouraged as this could pose a major security risk for your wallet that they may misuse access in the future or store the copy of the seed less securely than you.
+
+The safest method of storing your seed is on a physical medium, eg. written on paper. Store this paper as you would a key to your personal vault of gold. This is essentially what these seed words represent.
 
 ---
 
@@ -43,7 +45,7 @@ It is possible to import a standalone private key[^10724] into `dcrwallet`. Note
 Unlock the wallet (ignore angle brackets):
 
 ```no-highlight
-dcrctl --wallet walletpassphrase <private encryption passphrase> 60
+promptsecret | dcrctl --wallet - <private encryption passphrase> 60
 ```
 
 Import the standalone (`--noseed`) private key (ignore angle brackets):
@@ -60,29 +62,50 @@ dcrctl --wallet getbalance "imported" 0 all
 
 ---
 
-#### 7. What is the difference between a testnet and mainnet address? 
+#### 7. What is the difference between a testnet and mainnet public key address?
 
-A testnet public key address[^11507] starts with the letters `Tk`. A mainnet address starts with the letters `Dk`. `T` = Testnet, `D` = (Decred) Mainnet.
+A public key address, also called Pay-To-Pubkey (P2Pk), can be identified with its 2-byte prefix which identifies the network and type. A mainnet public key address starts with the letters `Dk` while a testnet public key address[^11507] starts with the letters `Tk`. 
 
 ---
 
-#### 8. What are the different types of addresses? 
+#### 8. What are the different types of addresses?
 
 A Decred address[^14995] is actually just a representation of a public key (which itself could be a script hash) along with a 2-byte prefix which identifies the network and type and a checksum suffix in order to detect improperly entered addresses.
 
 Consequently, you can always tell what type of address it is based on the 2-byte prefix.
 
-The first byte of the prefix identifies the network. This is why all mainnet addresses start with "D", testnet addresses start with "T", and simnet addresses start with "S". The second byte of the prefix identifies the type of address it is.
+The first byte of the prefix identifies the network. This is why all mainnet addresses start with "D", testnet addresses start with "T", and simnet addresses start with "S". 
 
-The most common addresses used at the moment are secp256k1 pubkey hashes, which are identified by a lowercase "s". It represents a single public key and therefore only has a single associated private key which can be used to redeem it.
+|        	| (Decred) Mainnet 	| Testnet 	| Simnet 	|
+|--------	|:----------------:	|:-------:	|:-------:	|
+| Prefix 	|         D        	|    T    	|    S   	|
 
-The stake pool, however, uses a pay-to-script-hash address, which is identified by the second byte being a lowercase "c" (again that is shown in the linked params). The specific flavor of script it generates is a multi-signature 1-of-2, which is how it allows either the pool, or you, to vote. Both you and the stake pool have your own private keys and since the script only requires one signature of the possible two, that is how it allows delegation of voting rights to the pool without you giving up your voting rights completely.
+The second byte of the prefix identifies the type of address it is. The most common addresses used at the moment are secp256k1 pubkey hashes, which are identified by a lowercase "s". It represents a single public key and therefore only has a single associated private key which can be used to redeem it.
+
+Voting Service Providers (VSPs) use pay-to-script-hash addresses, which are identified by the second byte being a lowercase "c" (again that is shown in the linked params). The specific flavor of script it generates is a multi-signature 1-of-2, which is how it allows either the VSP, or you, to vote. Both you and the VSP have your own private keys and since the script only requires one signature of the possible two, that is how it allows delegation of voting rights to the VSP without you giving up your voting rights completely.
+
+| Address   Type     	| Locking   Script 	| (Decred) Mainnet  	| Testnet 	| Simnet 	| Prefix Size (byte) 	|
+|--------------------	|:----------------:	|:-----------------:	|:--------:	|:------:	|:------------------:	|
+| Pay-to-Pubkey      	|       P2Pk       	|         Dk        	|    Tk   	|   Sk   	|    2                  	|
+| Pay-to-Pubkey-Hash (secp256k1)  	|       P2PKH      	|         Ds        	|    Ts   	|   Ss   	|    2                  	|
+| Pay-to-Script-Hash 	|       P2SH       	|         Dc        	|    Tc   	|   Sc   	|    2                  	|
+
+---
+
+#### 9. I have lost my seed. What can I do?
+
+If you have lost all copies of your seed *and* the wallet (or the wallet's passphrase), then you're out of luck: your funds are truly lost.
+
+If you still have access to the wallet and the passphrase you need to **IMMEDIATELY CREATE A NEW WALLET** with a new seed that you properly store and then transfer your funds from the old wallet to the new.
+
+If you have live tickets, maintain both wallets until all tickets have voted, then transfer the remaining funds to the new wallet.
+
+You should backup your `wallet.db` file (preferably in a thumb drive stored in a secure location) until all funds have been transferred.
 
 ---
 
 ## <img class="dcr-icon" src="/img/dcr-icons/Sources.svg" /> Sources 
 
-[^8613]: Decred Forum, [Post 8,613](https://forum.decred.org/threads/576/#post-8613)
 [^8660]: Decred Forum, [Post 8,660](https://forum.decred.org/threads/534/page-3#post-8660)
 [^9803]: Decred Forum, [Post 9,803](https://forum.decred.org/threads/686/#post-9803)
 [^10452]: Decred Forum, [Post 10,452](https://forum.decred.org/threads/734/#post-10452)
