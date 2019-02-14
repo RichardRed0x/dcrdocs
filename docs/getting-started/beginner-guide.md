@@ -8,7 +8,7 @@ This guide offers signposts to some useful resources, including how to set up yo
 
 ## Wallets
 
-[Decrediton](../wallets/decrediton/decrediton-setup.md) is Decred's GUI wallet. It supports Voting through [Voting Service Providers](https://decred.org/stakepools/) and offers the easiest way to start buying tickets and participating in governance.
+[Decrediton](../wallets/decrediton/decrediton-setup.md) is Decred's GUI wallet. It supports Voting through [Voting Service Providers](https://decred.org/vsp/) and offers the easiest way to start buying tickets and participating in governance.
 
 There is also a [Command Line Interface](../wallets/cli/cli-installation.md) that exposes more advanced functionality, including the ability to run a personal Voting wallet.
 
@@ -21,7 +21,7 @@ The following guides go into depth on key aspects of the Decred experience:
 * [Governance](../governance/introduction-to-decred-governance.md)
 * [Ticket buying guide](../proof-of-stake/proof-of-stake.md)
 * [Politeia](../governance/politeia/politeia.md)
-* [Voting on consensus rules changes](../governance/consensus-rules-voting.md)
+* [Voting on consensus rules changes](../governance/consensus-rule-voting/consensus-rules-voting.md)
 * [Using Testnet](../advanced/using-testnet.md)
 
 
@@ -65,7 +65,7 @@ The following chat platforms are bridged, such that one's messages are relayed t
 * [dcrweb](https://github.com/decred/dcrweb) - [Decred.org](https://decred.org/)
 * [dcps](https://github.com/decred/dcps) - Decred Change Proposals
 
-Telegram, Rocket.Chat and KakaoTalk are partially bridged.
+Telegram and KakaoTalk are partially bridged.
 
 ### Social Media
 

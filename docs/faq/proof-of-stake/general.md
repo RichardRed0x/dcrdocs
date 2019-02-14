@@ -11,7 +11,7 @@ In order to participate, users can purchase "tickets", which enter a lottery poo
 This hybrid system has several advantages that solve problems PoW-only systems might encounter. For example, because the PoS voters have to validate the blocks the PoW miners mine, the PoW miners cannot 
 decide on their own to change the rules of the network (a 51% attack). Likewise, when the Decred chain hardforks, the minority chain will die off quickly due to not being validated by PoS voters.
 
-The tickets system rewards participants for their voting. Every Decred block has a PoS reward component that will be distributed to every ticket chosen to vote in that block. The system is designed in such a  way that the average time for the ticket to be selected is 28 days. If a ticket hasn't been selected after 40960 blocks (a bit under 5 months) it will be revoked by the system. The DCR used to purchase a ticket is returned regardless of whether or not it votes.
+The tickets system rewards participants for their voting. Every Decred block has a PoS reward component that will be distributed to every ticket chosen to vote in that block. The system is designed in such a way that the average time for the ticket to be selected is 28 days. If a ticket hasn't been selected after 40,960 blocks (a bit under 5 months) it will be revoked by the system. The DCR used to purchase a ticket is returned regardless of whether or not it votes.
 
 Another interesting feature this PoS system allows for is the ability to vote on an agenda. Because the block validation can be considered a vote, by adding extra "votebit" components to the ticket, the system can track and count votes over a series of blocks. These votes can be about anything. In practice, these on-chain votes are used to accept or reject proposed changes to the consensus rules.
 
@@ -35,7 +35,7 @@ It is important to note that you are only assigning voting rights to the VSP, no
 
 #### 4. What is the "ticket price"? 
 
-The price for tickets is determined by an algorithm that aims to keep the ticket pool size, which is the total amount of tickets in the PoS system ticket pool, around a target size of 40960 tickets. 
+The price for tickets is determined by an algorithm that aims to keep the ticket pool size, which is the total amount of tickets in the PoS system ticket pool, around a target size of 40,960 tickets. 
 
 The ticket price goes up or down according to the demand for tickets, and the number of tickets currently in the pool. Every 144 blocks the algorithm adjusts the ticket price. This is called a buying window. Each block can contain 20 newly bought tickets. This means that in every buying window a maximum of 2880 tickets can be added to the PoS system ticket pool.
 
@@ -47,7 +47,7 @@ The ticket price is always refunded, no matter if your ticket votes, misses or e
 
 The PoS system utilizes two types of fees, a "txfee" (also known as a 'split' fee) and a "ticketfee".
 	
-The txfee is a fee you pay the network for handling the transaction to buy your ticket. This fee is at default set to a low amount (0.001 DCR/kB) and should not be changed.
+The txfee is a fee you pay the network for handling the transaction to buy your ticket. This fee is at default set to a low amount (0.0001 DCR/kB) and should not be changed.
 The ticketfee is the fee you pay if your ticket gets mined. This fee is an incentive for PoW miners to mine your ticket and add it to the ticket pool.
 
 In case the buying window is full, meaning there are more tickets being bought than there are available to be mined during that window, the ticketfee will be used to determine which tickets get put into
@@ -74,7 +74,7 @@ It also reduces latency between the wallet and network which can reduce the chan
 
 #### 7. What happens to my funds when I buy a ticket? 
 
-Funds used to purchase tickets are locked until your ticket is selected to vote or expires; tickets expire if they aren't selected to vote after 40960 blocks (about 4 months). If your ticket does successfully vote when called, you will receive the PoS reward. 
+Funds used to purchase tickets are locked until your ticket is selected to vote or expires; tickets expire if they aren't selected to vote after 40,960 blocks (about 4 months). If your ticket does successfully vote when called, you will receive the PoS reward. 
 
 If you submit a ticket, and it is not added to the ticket pool (included in a block by PoW miners), the `ticketfee` set when you purchased your ticket is never paid. The `txfee` for buying the ticket is paid out of the unlocked DCR sent back to your wallet. 
 
@@ -82,8 +82,7 @@ If you submit a ticket, and it is not added to the ticket pool (included in a bl
 
 #### 8. What are the chances of my ticket voting? 
 
-The PoS system in Decred uses a Poisson distribution to determine the chances of a ticket voting at any given time. Given the target pool size of 40960 tickets, any one ticket has a 50% chance to vote
-within 28 days and a 99.5% chance to vote before expiry. Note that these values will change with the pool size.
+The PoS system in Decred uses a Poisson distribution to determine the chances of a ticket voting at any given time. Given the target pool size of 40,960 tickets, the average time for any one ticket to vote is 28 days, and each ticket has a 99.5% chance to vote before expiry. Note that these values will change with the pool size.
 
 ---
 
@@ -113,7 +112,7 @@ Currently, a platform for the community to submit and advocate a voting agenda i
 
 #### 10. What is hardfork voting? 
 
-A more up-to-date version of this information, with a diagram, is available on [consensus rules voting](../../governance/consensus-rules-voting.md) page.
+A more up-to-date version of this information, with a diagram, is available on [consensus rules voting](../../governance/consensus-rule-voting/consensus-rules-voting.md) page.
 
 Like any other cryptocurrency, Decred might need to hardfork at some point.
 
@@ -138,7 +137,7 @@ In case a vote fails a new round will start at the beginning of the process. Thi
 
 #### 11. Is Proof-of-Stake (PoS) susceptible to large exchanges using their customers’ DCR? 
 
-The amount of DCR a person (or exchange) posesses doesn't matter, only the number of tickets. Funds used to purchase tickets are locked until the ticket they purchased votes. This means that DCR involved in PoS are effectively nontransferable. For an exchange to use their customers’ DCR for voting, they would have to transfer them out of the wallets and lock them for up to 5 months. People would notice their balances change (DCR locked in PoS will not show as spendable) and they would not be able to withdraw any funds so the exchange would suffer a large loss of liquidity.
+The amount of DCR a person (or exchange) possesses doesn't matter, only the number of tickets. Funds used to purchase tickets are locked until the ticket they purchased votes. This means that DCR involved in PoS are effectively nontransferable. For an exchange to use their customers’ DCR for voting, they would have to transfer them out of the wallets and lock them for up to 5 months. People would notice their balances change (DCR locked in PoS will not show as spendable) and they would not be able to withdraw any funds so the exchange would suffer a large loss of liquidity.
 
 Furthermore, there is a hard limit of 20 tickets added per block, so no exchange could flood the pool faster than this.
 
@@ -148,7 +147,7 @@ Finally, there's a soft cap on the total number of tickets in the pool. Every 14
 
 #### 12. Is Proof-of-Stake (PoS) susceptible to influence from large balance holders such as the original developers? 
 
-The pool size limits above apply here. This stops one person/group flooding the PoS pool with large numbers of their own tickets. Even if they bought up the whole pool (with huge fees) the most they would likely get is about 4000 tickets (based on previous ticket windows where the ones around 30 DCR usually go up to 100 for the next window, and the max for the one after that is often over 300). So a large balance holder could probably buy 2 windows out. A window at 30 would be 86,400 DCR, then the next at 100 would be 288,000 DCR. So it would cost 374,400 DCR to buy 5760 tickets. With a target pool size of 40960 tickets, 374400 DCR would give you about 14% of all tickets.
+The pool size limits above apply here. This stops one person/group flooding the PoS pool with large numbers of their own tickets. Even if they bought up the whole pool (with huge fees) the most they would likely get is about 4000 tickets (based on previous ticket windows where the ones around 30 DCR usually go up to 100 for the next window, and the max for the one after that is often over 300). So a large balance holder could probably buy 2 windows out. A window at 30 would be 86,400 DCR, then the next at 100 would be 288,000 DCR. So it would cost 374,400 DCR to buy 5,760 tickets. With a target pool size of 40,960 tickets, 374,400 DCR would give you about 14% of all tickets.
 
 Now the holder could wait a couple of days for the price to drop then start buying back up again. Except that most of their funds will be locked in the ones they bought earlier (although some will have voted) so their buying power for the new window is greatly reduced. But let's say they have super capital and bought all the DCR on all exchanges. So they are able to buy another two windows and replace those tickets that voted and were successful in buying all the tickets (at very high fees and/or prices). Let's say that takes them to about 25% of the tickets.
 
@@ -161,6 +160,15 @@ So basically this is close to impossible, even if a single person has a HUGE per
 But then we come to the Voting Service Providers. VSPs, while not having access to any of their users' funds, do have the ability to change votes on tickets assigned to them. This is why it is suggested that when joining a VSP, people don't just go for the largest one. Decred is short for 'decentralised credit' so part of the spirit of PoS is ensuring that the VSPs don't get too large in relation to the others. However, even the largest at almost 20% would still only get on average one vote per block.
 
 Decred was specifically designed to minimise impact from both large PoW mining pools and PoS VSPs as well as individuals (including developers) with large holdings. 
+
+---
+
+#### 13. Why is the ticket pool target size 40,960?
+
+This target was selected prior to Decred's launch to ensure that tickets would have a 99.5% chance of voting before they expire.
+
+
+---
 
 ## :fa-book: Links
 
